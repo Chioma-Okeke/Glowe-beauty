@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Glowé Beauty</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Glowé Beauty</h1>
+            <nav>
+                <a href="#hero-section">Home</a>
+                <a href="#">Shop</a>
+                <a href="#core-values-section">Values</a>
+                <a href="#contact-section">Contact</a>
+            </nav>
+        </header>
+
+        <section id="hero-section" class="hero">
+            <video autoplay muted loop id="myVideo">
+                <source src="/images/hero-compressed.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="hero-content">
+                <h2>Radiance in Every Drop</h2>
+                <p>
+                    Glowé Beauty crafts high-quality cosmetics using natural
+                    ingredients — for skin that speaks confidence.
+                </p>
+            </div>
+        </section>
+
+        <section id="core-values-section" class="values-container container">
+            <div>
+                <h2>Our Core Values</h2>
+                <p>
+                    We believe in quality, sustainability, and confidence
+                    through self-care.
+                </p>
+            </div>
+            <div class="values">
+                <div class="value">
+                    <h3>Empowerment</h3>
+                    <p>
+                        We believe beauty is a tool for self-expression and
+                        confidence.
+                    </p>
+                </div>
+                <div class="value">
+                    <h3>Sustainability</h3>
+                    <p>
+                        Eco-friendly packaging and mindful sourcing are core to
+                        our brand.
+                    </p>
+                </div>
+                <div class="value">
+                    <h3>Diversity</h3>
+                    <p>
+                        We celebrate all skin tones and identities in our
+                        inclusive range.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="products container">
+            <div class="product gloss">
+                <div class="product-card-content">
+                    <h3>Glossy Lips</h3>
+                    <p>
+                        Hydrating lip gloss with a subtle shimmer — your
+                        everyday glam.
+                    </p>
+                </div>
+            </div>
+            <div class="product Foundation">
+                <div class="product-card-content">
+                    <h3>Flawless Foundation</h3>
+                    <p>Lightweight, breathable coverage for every skin tone.</p>
+                </div>
+            </div>
+            <div class="product highlighter">
+                <div class="product-card-content">
+                    <h3>Glowy Highlighter</h3>
+                    <p>
+                        Capture the light with our silky smooth, radiant
+                        highlighter.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials container">
+            <div class="testimonial">
+                <p>"I finally found a brand that understands my skin tone!"</p>
+                <span>- Sarah N.</span>
+            </div>
+            <div class="testimonial">
+                <p>
+                    "The packaging is elegant, and the products feel luxurious."
+                </p>
+                <span>- Daniella R.</span>
+            </div>
+            <div class="testimonial">
+                <p>
+                    "Glowé is now my everyday routine. I love how fresh my skin
+                    looks."
+                </p>
+                <span>- Amina K.</span>
+            </div>
+        </section>
+
+        <section id="contact-section" class="contact container">
+            <img class="contact-image" src="/images/contact.jpg" />
+            <div>
+                <h2>Contact Us</h2>
+                <p>
+                    Have questions or want to collaborate? We’d love to hear
+                    from you.
+                </p>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required />
+                        <small class="error" id="nameError"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required />
+                        <small class="error" id="emailError"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            required
+                        ></textarea>
+                        <small class="error" id="messageError"></small>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Glowé Beauty. Crafted with love and glow ✨</p>
+        </footer>
+
+        <script src="index.js"></script>
+    </body>
+</html>

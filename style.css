@@ -1,0 +1,317 @@
+:root {
+    --primary: #d63384;
+    --secondary: #9b59b6;
+    --accent: #f39c12;
+    --bg: #fff0f6;
+    --text-dark: #2d2d2d;
+    --text-light: #ffffff;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+  padding: 3rem 2rem;
+  max-width: 1440px;
+}
+
+header {
+    background: var(--primary);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.hero {
+    text-align: center;
+    color: #222;
+    height: 100vh;
+    position: relative
+}
+
+.hero .hero-content {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.356);
+  color: white;
+}
+
+.hero .hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: "Georgia", serif;
+}
+
+.hero .hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.hero .hero-content button {
+    background: var(--primary);
+    color: var(--text-light);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.hero button:hover {
+    background: var(--secondary);
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.values,
+.products,
+.testimonials {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.value,
+.testimonial {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.value h3 {
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.product {
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.product.gloss,
+.product.foundation,
+.product.highlighter {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.product.gloss {
+  background-image: url("/images/lip-gloss.jpg");
+}
+.product.foundation {
+  background-image: url("/images/foundation.jpg");
+}
+.product.highlighter {
+  background-image: url("/images/highlighter.jpg");
+}
+
+.product-card-content {
+  height: 100%;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.452);
+  color: white;
+}
+
+.product h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial span {
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+footer {
+    background: var(--secondary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 2rem;
+}
+
+@media (min-width: 768px) {
+    .values,
+    .products,
+    .testimonials {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+
+    .contact {
+      flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+      flex-direction: column;
+    }
+}
+
+/* contact section */
+
+.contact {
+  background: #e8f5e9;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.contact-image {
+  width: 40%;
+  border: none;
+  border-radius: 16px;
+}
+
+.contact h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+button[type="submit"] {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: var(--secondary);
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  display: none;
+  margin-top: 0.25rem;
+}
+
+.values-container {
+  background: #f3e5f5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px
+}
+
+.products-section {
+  background: #e3f2fd;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 1rem;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
