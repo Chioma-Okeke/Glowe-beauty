@@ -1,3 +1,4 @@
+/* general */
 :root {
     --primary: #d63384;
     --secondary: #9b59b6;
@@ -22,22 +23,51 @@ body {
 }
 
 .container {
-  padding: 3rem 2rem;
-  max-width: 1440px;
-  margin: 0px auto;
+    padding: 3rem 2rem;
+    max-width: 1440px;
+    margin: 0px auto;
 }
 
 .section-title {
-  text-align: center;
-  color: var(--secondary);
+    text-align: center;
+    font-size: 2rem;
+    color: var(--secondary);
 }
 
 .section-sub-title {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-weight: 500;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 500;
 }
 
+/* combined rules */
+.values,
+.products,
+.testimonials {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.value,
+.testimonial {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.product.gloss,
+.product.foundation,
+.product.highlighter,
+.hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* navigation bar */
 header {
     color: var(--text-light);
     padding: 1rem 1rem;
@@ -59,8 +89,8 @@ header {
 }
 
 nav {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -75,6 +105,7 @@ nav a:hover {
     color: var(--accent);
 }
 
+/* hero section */
 .hero {
     text-align: center;
     color: #222;
@@ -83,14 +114,14 @@ nav a:hover {
 }
 
 .hero .hero-content {
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.356);
-  color: white;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.356);
+    color: white;
 }
 
 .hero .hero-content h1 {
@@ -106,37 +137,27 @@ nav a:hover {
 }
 
 .hero video {
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-.values,
-.products,
-.testimonials {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr;
-}
-
-.value,
-.testimonial {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-}
-
+/* core values section */
 .value h3 {
     color: var(--secondary);
     margin-bottom: 0.5rem;
 }
 
+.values-container {
+    background: #f3e5f5;
+    text-align: center;
+}
+
+/* product section */
 .product {
     border-radius: 20px;
     text-align: center;
@@ -144,35 +165,26 @@ nav a:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-.product:hover{
-  transform: scale(105%);
-}
-
-.product.gloss,
-.product.foundation,
-.product.highlighter,
-.hero {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.product:hover {
+    transform: scale(105%);
 }
 
 .product.gloss {
-  background-image: url("/images/lip-gloss.jpg");
+    background-image: url("/images/lip-gloss.jpg");
 }
 .product.foundation {
-  background-image: url("/images/foundation.jpg");
+    background-image: url("/images/foundation.jpg");
 }
 .product.highlighter {
-  background-image: url("/images/highlighter.jpg");
+    background-image: url("/images/highlighter.jpg");
 }
 
 .product-card-content {
-  height: 100%;
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.452);
-  border-radius: 16px;
-  color: white;
+    height: 100%;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.452);
+    border-radius: 16px;
+    color: white;
 }
 
 .product h3 {
@@ -181,10 +193,11 @@ nav a:hover {
     font-weight: 600;
 }
 
+/* testimonial section */
 .testimonial .title {
-   text-align: center;
-  color: var(--secondary);
-  margin-bottom: 1rem;
+    text-align: center;
+    color: var(--secondary);
+    margin-bottom: 1rem;
 }
 
 .testimonial p {
@@ -197,6 +210,88 @@ nav a:hover {
     color: var(--secondary);
 }
 
+/* contact section */
+.contact {
+    background: #e8f5e9;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.contact-image {
+    width: 40%;
+    border: none;
+    border-radius: 16px;
+}
+
+.contact h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+button[type="submit"] {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: var(--secondary);
+}
+
+.error {
+    color: red;
+    font-size: 0.85rem;
+    display: none;
+    margin-top: 0.25rem;
+}
+
+/* footer */
 footer {
     background: var(--secondary);
     color: var(--text-light);
@@ -214,91 +309,8 @@ footer {
     .hero h1 {
         font-size: 3rem;
     }
-  }
 
-/* contact section */
-
-.contact {
-  background: #e8f5e9;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-  justify-content: center;
-}
-
-.contact-image {
-  width: 40%;
-  border: none;
-  border-radius: 16px;
-}
-
-.contact h2 {
-  color: var(--primary);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.contact p {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-}
-
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-input:focus,
-textarea:focus {
-  border-color: var(--primary);
-  outline: none;
-}
-
-button[type="submit"] {
-  background: var(--primary);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background: var(--secondary);
-}
-
-.error {
-  color: red;
-  font-size: 0.85rem;
-  display: none;
-  margin-top: 0.25rem;
-}
-
-.values-container {
-  background: #f3e5f5;
-  text-align: center;
+    .hero {
+        justify-content: space-between;
+    }
 }
