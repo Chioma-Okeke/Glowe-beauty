@@ -24,6 +24,7 @@ body {
 .container {
   padding: 3rem 2rem;
   max-width: 1440px;
+  margin: 0px auto;
 }
 
 header {
@@ -66,7 +67,7 @@ nav a:hover {
   color: white;
 }
 
-.hero .hero-content h2 {
+.hero .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-family: "Georgia", serif;
@@ -107,6 +108,12 @@ nav a:hover {
 .value h3 {
     color: var(--secondary);
     margin-bottom: 0.5rem;
+}
+
+.product-title {
+  text-align: center;
+  color: var(--secondary);
+  margin-bottom: 1rem;
 }
 
 .product {
@@ -151,6 +158,12 @@ nav a:hover {
     font-weight: 600;
 }
 
+.testimonial .title {
+   text-align: center;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
 .testimonial p {
     font-style: italic;
     margin-bottom: 0.5rem;
@@ -175,20 +188,10 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .hero h2 {
+    .hero h1 {
         font-size: 3rem;
     }
-
-    .contact {
-      flex-direction: row;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact {
-      flex-direction: column;
-    }
-}
+  }
 
 /* contact section */
 
@@ -197,8 +200,9 @@ footer {
   display: flex;
   align-items: center;
   text-align: center;
-  gap: 1rem;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
 }
 
 .contact-image {
@@ -279,28 +283,9 @@ button[type="submit"]:hover {
   gap: 32px
 }
 
-.products-section {
-  background: #e3f2fd;
-  text-align: center;
-}
-
 .product-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
-}
-
-.product-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 250px;
-  padding: 1rem;
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
 }
