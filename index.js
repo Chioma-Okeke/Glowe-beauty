@@ -2,6 +2,7 @@ const form = document.getElementById("contactForm");
 const name = document.getElementById("name");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
+const header = document.getElementById("navbar");
 
 const nameError = document.getElementById("nameError");
 const emailError = document.getElementById("emailError");
@@ -10,6 +11,14 @@ const messageError = document.getElementById("messageError");
 function isValidEmail(email) {
     return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
 }
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight) {
+        header.style.backgroundColor = "#d63384";
+    } else {
+        header.style.backgroundColor = "transparent";
+    }
+});
 
 form.addEventListener("submit", function (e) {
     let valid = true;
