@@ -53,7 +53,6 @@ form.addEventListener("submit", function (e) {
         e.preventDefault();
     } else {
         alert("Form submitted successfully!");
-        // Optionally clear form
         form.reset();
     }
 });
